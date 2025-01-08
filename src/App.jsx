@@ -8,6 +8,11 @@ import Condition from "./Condition/Conditional";
 import List from "./List";
 import Clicker from "./Click";
 import MyComponent from "./UseState";
+import Onchange from "./OnChange";
+import ObjectUpdater from "./UpdateObject";
+import Effect from './UseEffect';
+import SocketIOClient from "./Socket"
+import WindowResize from "./WindowResize";
 function App() {
 
   const fruits = [
@@ -36,7 +41,12 @@ function App() {
       <Button></Button>
       <Clicker method={parentMethod}></Clicker>
       <MyComponent></MyComponent>
+      <Onchange></Onchange>
+      <ObjectUpdater></ObjectUpdater>
+      <Effect></Effect>
       <Footer></Footer>
+      <SocketIOClient></SocketIOClient>
+      <WindowResize></WindowResize>
     </>
   );
 }

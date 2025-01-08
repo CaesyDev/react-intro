@@ -2,15 +2,31 @@ import React, {useState} from 'react';
 
 function MyComponent(){
     const [name, setName] = useState('Hello World');
-
-    const updateName = () => {
-        setName('React is awesome');
-    }
+    const [counter, setCounter] = useState(0);
 
     return (
         <div>
-            <h1>{name}</h1>
-            <button onClick={updateName}>Update Name</button>
+           
+            <p>Counter: {counter}</p>
+            <button onClick={() => setCounter(counter + 1)}>Increment Counter</button>
+
+            <button onClick={() => setCounter(counter - 1)}>Decrement Counter</button>
+
+            <button onClick={() => setCounter(0)}>Reset Counter</button>
+
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+
+            <h2>You clicked {counter} times</h2>
+
+            <button onClick={() => setName('Hello World')}>Reset Name</button>
+
+            <h2>Name: {name}</h2>
+
+            <button onClick={() => setName('Hello Universe')}>Change Name</button>
+
+            <h2>Name: {name}</h2>
+
+            <button onClick={() => setName('Hello World')}>Reset Name</button>
         </div>
     )
 }
